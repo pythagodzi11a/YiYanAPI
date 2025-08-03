@@ -1,0 +1,27 @@
+[group]
+# enable 决定了是否在 群聊/私聊 中启用插件。
+# 可选值为 true/false
+enable = true
+
+# mode 决定了 群聊/私聊 中启用时决定发送的机制，
+# blacklist 模式会从blacklist表格中加载 群号/qq号，使用黑名单机制判断。
+# whitelist 模式会从whitelist表格中加载 群号/qq号，使用白名单机制判断。
+# 可选值为 "blacklist"/"whitelist"
+mode = "blacklist"
+
+# whitelist 中填写群号，开发时是填写的纯数字，即类似
+# whitelist = [
+#    123456,
+#    78946
+# ]
+# 但是在判断时做过一些类型转换，理论上使用字符串，即加上引号，可能也可以（未测试）。
+# 需要确保你填入符合toml规范，即列表中的类型是同一类型。要么都加引号，要么都不加
+whitelist = []
+blacklist = []
+
+# 私聊配置同上
+[private]
+enable = true
+mode = "blacklist"
+whitelist = []
+blacklist = []
