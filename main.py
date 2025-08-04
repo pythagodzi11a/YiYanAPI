@@ -89,10 +89,7 @@ class YiYanAPI(BasePlugin):
     @staticmethod
     async def fetch_yiyan() -> str:
         url = "https://v1.hitokoto.cn/?c=f&encode=text"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36 Edg/138.0.0.0"
-        }
-        # noinspection PyBroadException
+
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
