@@ -67,7 +67,7 @@ class YiYanAPI(BasePlugin):
     name = "YiYanAPI"  # 插件名称
     version = "0.0.2"  # 插件版本
     author = "pythagodzilla"  # 插件作者
-    info = "每日一言"  # 插件描述
+    description = "每日一言"  # 插件描述
 
     @bot.private_event()
     async def on_message(self, msg: PrivateMessage):
